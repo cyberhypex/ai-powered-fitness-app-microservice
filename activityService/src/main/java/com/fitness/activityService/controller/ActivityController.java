@@ -6,10 +6,9 @@ import com.fitness.activityService.service.ActivityService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/activities")
@@ -22,6 +21,18 @@ public class ActivityController {
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest activityRequest){
         System.out.println("Doing");
         return ResponseEntity.ok(activityService.trackActivity(activityRequest));
+
+    }
+    @GetMapping
+    public ResponseEntity<List<ActivityResponse>> getUserActivities(@RequestHeader("X-User-Id")String userId){
+     //   System.out.println("Doing");
+        return ResponseEntity.ok(activityService.getUserActivities(userId));
+
+    }
+    @GetMapping("/{actId}")
+    public ResponseEntity<ActivityResponse> getActivityById(@PathVariable String actId){
+        //   System.out.println("Doing");
+        return ResponseEntity.ok(activityService.getActivityById(actId));
 
     }
 
