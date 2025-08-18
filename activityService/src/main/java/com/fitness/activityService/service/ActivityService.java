@@ -43,6 +43,7 @@ public class ActivityService {
                 .startTime(activityRequest.getStartTime())
                 .additionalMetrics(activityRequest.getAdditionalMetrics())
                 .build();
+        log.info("Pushing into queue");
         Activity savedActivity=activityRepository.save(activity);
         //publish to RabbitMQ
         try{
