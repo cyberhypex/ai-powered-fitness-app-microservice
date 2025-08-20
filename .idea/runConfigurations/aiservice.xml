@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="aiservice" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="GEMINI_API_URL" value="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent" />
+      <env name="GEMINI_API_KEY" value="AIzaSyB_9b-65HMC5IiJd9nlaautqKlRsj_bXWs" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.fitness.aiservice.AiserviceApplication" />
+    <module name="aiservice" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
