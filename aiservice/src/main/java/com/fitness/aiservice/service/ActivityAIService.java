@@ -18,9 +18,13 @@ import java.util.List;
 
 @Slf4j
 @Service
-@RequiredArgsConstructor
+
 public class ActivityAIService {
     private final GeminiService geminiService;
+
+    public ActivityAIService(GeminiService geminiService) {
+        this.geminiService = geminiService;
+    }
 
     public Recommendation generateRecommendation(Activity activity){
         String prompt=createPromptForActivity(activity);
