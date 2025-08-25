@@ -24,6 +24,7 @@ public class ActivityAIService {
 
     public ActivityAIService(GeminiService geminiService) {
         this.geminiService = geminiService;
+        log.info("Created constructor parameter");
     }
 
     public Recommendation generateRecommendation(Activity activity){

@@ -23,7 +23,7 @@ public class RabbitMQConfig {
     private String routingKey;
     @Bean
     public Queue activityQueue(){
-        return new Queue("activity.queue",true);
+        return new Queue(queue,true);
     }
     @Bean
     public MessageConverter jsonMessageConverter(){
