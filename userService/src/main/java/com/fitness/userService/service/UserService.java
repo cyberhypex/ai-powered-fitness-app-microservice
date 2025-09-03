@@ -52,4 +52,8 @@ public class UserService {
     public boolean existByUserId(String userId) {
         return userRepository.existsById(userId);
     }
+
+    public Boolean existsByKeyCloakId(String userId) {
+        return null;
+    }
 }
